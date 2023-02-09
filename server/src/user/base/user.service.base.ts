@@ -11,14 +11,9 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { PrismaService } from "../../prisma/prisma.service";
 import { Prisma, User } from "@prisma/client";
-import { PasswordService } from "../../auth/password.service";
-import { transformStringFieldUpdateInput } from "../../prisma.util";
 
 export class UserServiceBase {
-  constructor(
-    protected readonly prisma: PrismaService,
-    protected readonly passwordService: PasswordService
-  ) {}
+  constructor(protected readonly prisma: PrismaService) {}
 
   async count<T extends Prisma.UserFindManyArgs>(
     args: Prisma.SelectSubset<T, Prisma.UserFindManyArgs>
