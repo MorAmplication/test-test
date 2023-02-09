@@ -13,7 +13,4 @@ model User {
   updatedAt DateTime @updatedAt
   firstName String?
   lastName  String?
-  username  String   @unique
-  password  String
-  roles     Json
 }
